@@ -126,7 +126,44 @@ background-color: #00aeef;
 	padding-top: 15px;
     margin-left: 5%;
 }
+.displayElInlineBlock{
+	display: inline-block;
+}
+.torket{
+	position:relative;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	-ms-transition: opacity 1s ease;
+	transition: opacity 1s ease;
 
+}
+.torket:hover > div> img {
+	opacity: 1;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	-ms-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+.torket>div>img{
+	opacity: 0;
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 95%;
+	z-index: -1;
+}
+.contact > h1 {
+    color: #FFFFFF;
+}
+address{
+    color: #FFFFFF;
+}
+#contact .container{
+    width: 90%;
+}
 .slider-area{
 	position: relative;
 	height: 630px;
@@ -145,6 +182,9 @@ background-color: #00aeef;
 	margin-left: -585px;
 	text-align: center;
 	color: #fff
+}
+.col-md-4{
+	margin-top: 20px;
 }
 .slider-content h2 {
   font-size: 40px;
@@ -237,7 +277,7 @@ background-color: #00aeef;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	border-bottom: 2px solid #00AEEF
+	border-bottom: 2px solid #00AEEF;
 }
 .single-work h3{
 	color: #202020;
@@ -271,7 +311,7 @@ background-color: #00aeef;
 	color: #eeeeee
 }
 .single-work:hover{
-	background: #00AEEF
+	/*background: #00AEEF*/
 }
 .single-work:hover h3{
 	color: #fff
