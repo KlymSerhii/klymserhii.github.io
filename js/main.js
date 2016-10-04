@@ -29,7 +29,7 @@ $(document).ready(function() {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top - $('#header').height() - 80
+                scrollTop: $(hash).offset().top - $('#header').height() + 40
             }, 800, function(){
                 window.location.hash = hash;
             });
