@@ -205,6 +205,12 @@ background-color: #EAB586;
 	width: 95%;
 	text-align:center;
 }
+.short_desc {
+	position: relative;
+	width: 50%;
+	margin-left: 10%;
+	display: inline-block;
+}
 .goods > .goods_items:after {
 	content: '';
 	width: 1px;
@@ -247,7 +253,7 @@ background-color: #EAB586;
 	-o-transition: opacity 300ms ease;
 	-ms-transition: opacity 300ms ease;
 	transition: opacity 300ms ease;
-	border-radius: 50%;
+	border-radius: 10%;
 }
 .contact > h1 {
     color: #FFFFFF;
@@ -414,6 +420,37 @@ address{
 	color: #eeeeee
 }
 
+/*Single item page*/
+.good_type, .good_sizes, .good_best_sides,
+.good_uses {
+	vertical-align: top;
+	display: inline-block;
+	width: 35%;
+	margin-left: 2%;
+	margin-top: 4%;
+}
+.good_sizes, .good_uses {
+	width: 50%;
+	margin-left: 4%;
+}
+.good_main_page.container{
+	margin-top: 40px;
+}
+.header.good_header {
+	position: relative;
+	top:0px;
+}
+.good_img_main_page img{
+	width: 100%;
+}
+.good_img_main_page {
+	position: relative;
+	/*top: 50px;*/
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+/*Single item page end*/
 
 .nav-tabs > li > a{
 	color: #666;
