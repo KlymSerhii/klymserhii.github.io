@@ -1,5 +1,5 @@
 <svg width="150" height="300" xmlns="http://www.w3.org/2000/svg">
   <g>
-    <path d="M150,0,150,300,0,150z" fill="rgb(118, 130, 245)"/>
+    <path d="M0,0,150,150,0,300z" fill="rgb(118, 130, 245)"/>
   </g>
 </svg>
