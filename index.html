@@ -1,26 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <title>React Planner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accel Synth Customer Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      *{
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Basic styling for the page and card-like appearance */
+      .support-container {
+        min-height: 100vh; /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3f4f6; /* Light gray background */
+        padding: 20px;
         box-sizing: border-box;
       }
-
-      html, body, #app {
+      .support-card {
+        background-color: white;
+        padding: 2rem 2.5rem; /* Increased padding */
+        border-radius: 0.75rem; /* Slightly larger rounded corners */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        text-align: center;
         width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        position: absolute;
-        left: 0;
-        top: 0;
+        max-width: 500px; /* Max width for the card */
+      }
+      .support-title {
+        font-size: 1.875rem; /* 30px */
+        font-weight: 600;
+        color: #1f2937; /* Darker gray */
+        margin-bottom: 1rem;
+      }
+      .support-text {
+        font-size: 1rem; /* 16px */
+        color: #4b5563; /* Medium gray */
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+      .support-button {
+        background-color: #3b82f6; /* Blue-500 */
+        color: white;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: inline-block; /* Allows padding and centering */
+        border: none; /* Remove default button border */
+        cursor: pointer; /* Pointer cursor on hover */
+      }
+      .support-button:hover {
+        background-color: #2563eb; /* Blue-600 */
+      }
+      .contact-info {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background-color: #eef2ff; /* Indigo-50 */
+        border-radius: 0.5rem;
+        border: 1px solid #c7d2fe; /* Indigo-200 */
+      }
+      .contact-info p {
+        font-size: 1rem;
+        color: #374151; /* Gray-700 */
+        margin-bottom: 0.5rem;
+      }
+      .contact-info a {
+        color: #3b82f6; /* Blue-500 */
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      .hidden {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <div id="app"></div>
-  <script type="text/javascript" src="4feee38f3a5ccae847d4.vendor.js"></script><script type="text/javascript" src="41f09e98204c97b5d5f7.app.js"></script></body>
+    <div class="support-container">
+      <div class="support-card">
+        <h1 class="support-title">Need Help?</h1>
+        <p class="support-text">
+          We're here to assist you! For any questions or support requests,
+          please get in touch with our team.
+        </p>
+        <button id="showContactBtn" class="support-button">
+          Contact Support
+        </button>
+
+        <div id="contactDetails" class="contact-info hidden">
+          <p>Support is available by contacting us via email:</p>
+          <p>
+            <a href="mailto:accelsynth@gmail.com">accelsynth@gmail.com</a>
+          </p>
+          <p class="mt-4 text-sm text-gray-500">
+            We typically respond within 24-48 business hours.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get the button and the contact details div
+      const showContactBtn = document.getElementById("showContactBtn");
+      const contactDetailsDiv = document.getElementById("contactDetails");
+
+      // Add event listener to the button
+      showContactBtn.addEventListener("click", function () {
+        // Toggle the 'hidden' class on the contact details div
+        if (contactDetailsDiv.classList.contains("hidden")) {
+          contactDetailsDiv.classList.remove("hidden");
+          showContactBtn.textContent = "Hide Contact Info"; // Change button text
+        } else {
+          contactDetailsDiv.classList.add("hidden");
+          showContactBtn.textContent = "Contact Support"; // Change button text back
+        }
+      });
+    </script>
+  </body>
 </html>
